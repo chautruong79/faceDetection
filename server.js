@@ -38,15 +38,15 @@ connection.once("open", () => {
 });
 mongoose.set("useCreateIndex", true);
 
-app.get("/", (req, res) => {
-  User.find({}, (err, users) => {
-    if (err) {
-      res.status(400).json("Error: " + err);
-    } else {
-      res.json(users);
-    }
-  });
-});
+// app.get("/", (req, res) => {
+//   User.find({}, (err, users) => {
+//     if (err) {
+//       res.status(400).json("Error: " + err);
+//     } else {
+//       res.json(users);
+//     }
+//   });
+// });
 
 app.post("/signin", (req, res) => {
   signin.handleSignin(req, res, bcrypt, User);
