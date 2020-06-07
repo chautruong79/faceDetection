@@ -42,7 +42,7 @@ const Signin = ({ handleRoute, loadUser }) => {
               color: "#f4b183",
             }}
           >
-            Hello there! ok
+            Hello there!
           </span>
         </h1>
         <h2
