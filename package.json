@@ -1,6 +1,6 @@
 {
   "name": "backend",
-  "homepage": "https://chautruong79.github.io/face-detection",
+  "homepage": "https://chautruong79.github.io/faceDetection",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",

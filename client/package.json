@@ -1,6 +1,6 @@
 {
   "name": "face-detection",
-  "homepage": "https://chautruong79.github.io/face-detection",
+  "homepage": "https://chautruong79.github.io/faceDetection",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -43,7 +43,7 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/chautruong79/face-detection.git"
+    "url": "git+https://github.com/chautruong79/faceDetection.git"
   },
   "author": "Chau Truong",
   "license": "ISC",
@@ -51,7 +51,7 @@
     "node": "12.16.3"
   },
   "bugs": {
-    "url": "https://github.com/chautruong79/face-detection/issues"
+    "url": "https://github.com/chautruong79/faceDetection/issues"
   },
   "proxy": "http://localhost:7000"
 }
