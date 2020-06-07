@@ -30,7 +30,7 @@ const Register = ({ handleRoute, loadUser }) => {
     }
   };
   const handleClick = () => {
-    fetch("http://localhost:7000/register", {
+    fetch("https://git.heroku.com/face-detectionct.git/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
