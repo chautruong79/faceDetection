@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Particles from "react-particles-js";
-import Navigation from "./components/Navigation/Navigation";
-import ImageLinkForm from "./components/ImageLinkForm/ImageLinkForm";
-import Rank from "./components/Rank/Rank";
-import FaceRecognition from "./components/FaceRecognition/FaceRecognition";
-import Signin from "./components/Signin/Signin";
-import Register from "./components/Register/Register";
+import Navigation from "../components/Navigation/Navigation";
+import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
+import Rank from "../components/Rank/Rank";
+import FaceRecognition from "../components/FaceRecognition/FaceRecognition";
+import Signin from "../components/Signin/Signin";
+import Register from "../components/Register/Register";
 import "./App.css";
 
 function App() {
@@ -35,7 +35,7 @@ function App() {
   const handleClick = (type) => {
     if (input.length > 0) {
       setImageURL(input);
-      fetch("https://git.heroku.com/face-detectionct.git/imageurl", {
+      fetch("http://localhost:7000", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -54,7 +54,7 @@ function App() {
             response.outputs[0].data.regions &&
             response.outputs[0].data.regions.length > 0
           ) {
-            fetch("https://git.heroku.com/face-detectionct.git/image", {
+            fetch("http://localhost:7000/image", {
               method: "PATCH",
               headers: {
                 Accept: "application/json",
@@ -122,6 +122,7 @@ function App() {
               opacity: 0.01,
             },
             move: {
+              // @ts-ignore
               direction: "right",
               speed: 0.07,
             },

@@ -18,7 +18,7 @@ const Signin = ({ handleRoute, loadUser }) => {
     }
   };
   const handleClick = () => {
-    fetch("https://git.heroku.com/face-detectionct.git/signin", {
+    fetch("http://localhost:7000/signin", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ email: email, password: password }),
