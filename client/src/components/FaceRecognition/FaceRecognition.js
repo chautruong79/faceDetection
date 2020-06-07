@@ -12,7 +12,7 @@ const FaceRecognition = ({ imageURL, info }) => {
           {box &&
             box.length > 0 &&
             box.map((item, ind) => {
-              return <BoundingBox item={item} id={ind} />;
+              return <BoundingBox item={item} key={ind} id={ind} />;
             })}
         </div>
       </div>

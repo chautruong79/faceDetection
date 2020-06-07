@@ -2,6 +2,11 @@
 import React, { useState } from "react";
 
 const ImageLinkForm = ({ handleChange, input, handleClick }) => {
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      handleClick(type);
+    }
+  };
   const [type, setType] = useState("hello");
   return (
     <div className="z">
@@ -43,6 +48,7 @@ const ImageLinkForm = ({ handleChange, input, handleClick }) => {
           <div className="  b--white pa4 br12 shadow-5 ">
             <input
               onChange={handleChange}
+              onKeyPress={handleKeyPress}
               value={input}
               className="f4 pa2 w-70 b--white "
               placeholder="Enter your URL here"
