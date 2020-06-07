@@ -35,7 +35,7 @@ function App() {
   const handleClick = (type) => {
     if (input.length > 0) {
       setImageURL(input);
-      fetch("http://localhost:7000", {
+      fetch("https://face-detectionct.herokuapp.com/", {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -54,7 +54,7 @@ function App() {
             response.outputs[0].data.regions &&
             response.outputs[0].data.regions.length > 0
           ) {
-            fetch("http://localhost:7000/image", {
+            fetch("https://face-detectionct.herokuapp.com/image", {
               method: "PATCH",
               headers: {
                 Accept: "application/json",
