@@ -1,0 +1,87 @@
+.App {
+  text-align: center;
+}
+
+.particles {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.bounding-box {
+  font-family: "sofia-pro", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  position: absolute;
+  box-shadow: 0 0 0 3px #149df2 inset;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.bounding-box-concepts {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-100%);
+}
+.bounding-box__concept {
+  background: #149df2;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 0.75rem;
+  line-height: 0.75rem;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  font-weight: 700;
+  padding: 1px 3px;
+  border-radius: 2px 2px 0 0;
+}
+.concept__name {
+  color: #fff;
+}
+.concept__prediction-val {
+  color: #fff;
+  font-size: 0.625rem;
+  margin-left: 0.5rem;
+}
+body {
+  color: white;
+}
+input:focus {
+  outline: none;
+  color: black;
+  border: 2px solid lightseagreen;
+}
+input,
+select,
+textarea {
+  color: white;
+}
+.z {
+  position: relative;
+  z-index: 1;
+}
+a:visited {
+  color: blue;
+  outline: none;
+}
+#demotext {
+  color: #ffffff;
+  text-shadow: 2px 2px 0 #969696, 1px 2px 2px #aba8a8;
+  color: #ffffff;
+}
+ul {
+  display: block;
+}
