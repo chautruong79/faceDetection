@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Particles from "react-particles-js";
 import Navigation from "../components/Navigation/Navigation";
 import ImageLinkForm from "../components/ImageLinkForm/ImageLinkForm";
@@ -23,7 +23,15 @@ function App() {
   });
 
   // useEffect(() => {
-  //   fetch("http://localhost:7000/")
+  //   fetch("http://localhost:7000/", {
+  //     method: "GET",
+  //     headers: {
+  //       Accept: "application/json",
+  //       "Content-Type": "application/json",
+  //       _method: "GET",
+  //       Authorization: "",
+  //     },
+  //   })
   //     .then((response) => response.json())
   //     .then(console.log);
   // }, []);
@@ -35,7 +43,7 @@ function App() {
   const handleClick = (type) => {
     if (input.length > 0) {
       setImageURL(input);
-      fetch("https://face-detectionct.herokuapp.com/", {
+      fetch("https://face-detectionct.herokuapp.com/imageurl", {
         method: "POST",
         headers: {
           Accept: "application/json",

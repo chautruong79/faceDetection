@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const cors = require("cors");
-const path = require("path");
+//const path = require("path");
 
 const register = require("./controllers/register");
 const signin = require("./controllers/signin");
@@ -19,10 +19,10 @@ const port = process.env.PORT || 7000;
 const apiKey = process.env.API;
 
 app.use(express.json());
-//app.use(express.static("public"));
+app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
-app.use(express.static(path.join(__dirname, "client", "build")));
+//app.use(express.static(path.join(__dirname, "client", "build")));
 
 mongoose.connect(
   "mongodb+srv://admin-ct:test123@cluster0-jvn0n.mongodb.net/UserDB?retryWrites=true&w=majority",
@@ -68,10 +68,10 @@ app.post("/imageurl", (req, res) => {
   image.handleAPICall(req, res, apiKey);
 });
 
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client", "build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+// });
 
-app.listen(process.env.PORT || 7000, () =>
+app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
